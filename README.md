@@ -9,6 +9,6 @@ To run the server:
 
 Commit to Heroku
 
-  -- heroku git:remote -a mybrary-dctablac
+  -- heroku git:remote -a mybrary-dctablac (only for first time connection after having a heroku app)
 
   -- git push heroku master
