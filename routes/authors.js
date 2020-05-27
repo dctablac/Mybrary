@@ -15,7 +15,7 @@ router.get('/', async (req,res) => {
             searchOptions: req.query
         });
     } catch {
-        res.redirect('/')
+        res.redirect('/');
     }
 });
 
