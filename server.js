@@ -6,6 +6,7 @@ const express = require('express');  // import express
 const app = express();               // app portion
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index.js');
 const authorRouter = require('./routes/authors.js');
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs');   // set view engine to ejs
 app.set('views', __dirname + '/views');   // views folder in curr dir
 app.set('layout', 'layouts/layout'); // helps for staple content shared amongst pages (like header and footer)
 app.use(expressLayouts);    // using express layouts
+app.use(methodOverride('_method')); // 
 app.use(express.static('public'));   // styles, imgs, js
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
